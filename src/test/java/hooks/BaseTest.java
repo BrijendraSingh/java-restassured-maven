@@ -8,7 +8,8 @@ public class BaseTest extends RestAssuredSetup {
 
     @BeforeSuite
     public void frameworkSetup(){
-        restSetup();
+        TestEnvironment.set();
+        restSetup(Auth.OAUTH2);
     }
 
     @AfterSuite
