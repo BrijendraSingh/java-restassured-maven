@@ -72,11 +72,6 @@ public class RestAssuredSetup {
 
     private String fetchOAuth2Token() {
         return RestAssured.given().baseUri(ConfigLoader.getOAuth2TokenUrl())
-//                .contentType(ContentType.JSON)
-//                .formParam("grant_type", ConfigLoader.getOAuth2GrantType())
-//                .formParam("client_id", ConfigLoader.getOAuth2ClientId())
-//                .formParam("client_secret", ConfigLoader.getOAuth2ClientSecret())
-//                .formParam("scope", ConfigLoader.getOAuth2Scope())
                 .get()
                 .then()
                 .extract()

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "Success": {
+      "type": "boolean"
+    },
+    "Error": {
+      "type": ["string", "null"]
+    },
+    "Data": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "Email": {
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        },
+        "FirstName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "LastName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "IsMaster": {
+          "type": "boolean"
+        },
+        "CreatedAt": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,12})?$"
+        }
+      },
+      "required": ["Id", "Email", "FirstName", "LastName", "IsMaster", "CreatedAt"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["Success", "Error", "Data"],
+  "additionalProperties": false
+}
