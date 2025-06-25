@@ -3,6 +3,9 @@
 <suite name="ApiTestSuite">
 <!--    <parameter name="env" value="qa"/>-->
 <!--    <parameter name="authType" value="bearer"/>-->
+    <listeners>
+        <listener class-name="listener.JsonReportListener"></listener>
+    </listeners>
     <test name="BearerTests">
         <classes>
             <class name="tests.DemoTest"/>

@@ -26,4 +26,19 @@ public class DemoTest extends BaseTest {
                     .demoTest_verifyDatabase()
                 .end();
     }
+
+    @Test
+    public void testTwo(){
+        user
+                .given()
+                .demoTest_preparePayload()
+                .when()
+                .demoTest_executeRequest()
+                .demoTest_verify200Status()
+                .then()
+                .demoTest_verifySchema()
+//                .demoTest_verifyResponse()
+                .demoTest_verifyDatabase()
+                .end();
+    }
 }
