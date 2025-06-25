@@ -2,6 +2,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+testng-report.json
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

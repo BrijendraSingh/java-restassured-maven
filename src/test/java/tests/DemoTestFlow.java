@@ -61,7 +61,7 @@ public class DemoTestFlow {
 
     private static Customer getExpectedCustomer() {
         CustomerData customerData = new CustomerData();
-        customerData.setCreatedAt("2024-02-18T12:40:14");
+        customerData.setCreatedAt("2024-02-18T12:40:14 ");
         customerData.setEmail("alice.smith@example.com");
         customerData.setId(2);
         customerData.setFirstName("Alice");
